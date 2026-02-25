@@ -1,0 +1,104 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* Card Container */
+.main {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 360px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    transform: translateY(0);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Lift on hover */
+.main:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* Profile image with hover effect */
+.profile-img-container {
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #000000;
+    transition: transform 0.5s ease;
+}
+
+.profile-img-container:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name animation */
+.name {
+    font-size: 24px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #3d3d3d, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+    0% { background-position: -200px; }
+    100% { background-position: 200px; }
+}
+
+/* Bio paragraph */
+.bio {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+/* Social buttons */
+.social-links {
+    margin-top: 20px;
+}
+
+.btn {
+    margin: 8px 5px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #636261;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff5722;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,87,34,0.5);
+}
